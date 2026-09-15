@@ -14,7 +14,7 @@
     --rust: #a15530;              /* Óxido/terracota del wordmark "Guaymaral" */
     --rust-hover: #8a4527;
     --gold: #c9982f;               /* Dorado del sol en el logo — acento puntual, no botones grandes */
-    --accent: var(--rust);          /* Color de acción principal (antes dorado, ahora óxido de marca) */
+    --accent: var(--rust);         /* Color de acción principal (antes dorado, ahora óxido de marca) */
     --accent-hover: var(--rust-hover);
     --bg-light: #f7f1e6;           /* Crema de fondo, igual al del logo */
     --bg-muted: #efe6d2;
@@ -97,17 +97,22 @@ a {
 
 .logo-text {
     font-family: var(--font-heading);
-    color: var(--primary);
-    font-size: 1.6rem;
+    color: var(--rust);
+    font-size: 1.4rem;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
 }
 
-.logo-text i {
-    color: var(--accent);
+.logo-img {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 55%;
+    border: 2px solid var(--gold);
 }
 
 .nav-menu {
@@ -241,13 +246,13 @@ a {
 
 .btn-gold {
     background: var(--accent);
-    color: #ffffff;
+    color: var(--text-dark);
 }
 
 .btn-gold:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(161, 85, 48, 0.4);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .btn-outline {
@@ -324,7 +329,7 @@ a {
     width: 100%;
     height: 48px;
     background-color: var(--accent);
-    color: #ffffff;
+    color: var(--text-dark);
     font-weight: 700;
     font-size: 0.9rem;
     font-family: inherit;
@@ -635,6 +640,31 @@ a {
     font-weight: 600;
 }
 
+/* --- VIDEO RESPONSIVO --- */
+.video-feature {
+    max-width: 900px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.video-embed-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.video-embed-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* --- CLIMA --- */
 .climate-box {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -668,7 +698,7 @@ a {
 
 .climate-card i {
     font-size: 2rem;
-    color: var(--gold);
+    color: var(--accent);
     margin-bottom: 12px;
 }
 
@@ -828,7 +858,7 @@ a {
 
 .ally-card.featured {
     border-color: var(--accent);
-    box-shadow: 0 8px 25px rgba(161, 85, 48, 0.18);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.18);
 }
 
 .ally-badge {
@@ -836,7 +866,7 @@ a {
     top: -12px;
     right: 24px;
     background: var(--accent);
-    color: #ffffff;
+    color: var(--text-dark);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.4px;
@@ -1045,7 +1075,7 @@ footer p {
 
 .social-icons a:hover {
     background: var(--accent);
-    color: #ffffff;
+    color: var(--text-dark);
 }
 
 /* --- MODAL VIDEO --- */
