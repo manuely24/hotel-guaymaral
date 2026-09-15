@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Guaymaral | Florián, Santander - Guía Ecoturística Oficial</title>
+    <meta name="description" content="Hospédate en el Hotel Guaymaral, en Florián, Santander, y explora las Ventanas de Tisquizoque, Charco Azul y las mejores rutas ecoturísticas de la región.">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Iconos FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Hoja de estilos del proyecto -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <a href="#inicio" class="logo-text"><img src="images/logo-hotel-guaymaral.jpg" alt="Logo Hotel Guaymaral" style="max-height:40px;">
+            <i class="fas fa-mountain"></i> Hotel Guaymaral
+        </a>
+
+        <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#atractivos">Atractivos</a></li>
+                <li><a href="#aliados">Guías y Tours</a></li>
+                <li><a href="#llegar">Cómo Llegar</a></li>
+                <li><a href="#hotel">El Hotel</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn-whatsapp-nav" data-wa-message="Hola, deseo información de reservas del Hotel Guaymaral.">
+            <i class="fab fa-whatsapp"></i> <span>Reservar: +57 314 481 3223</span>
+        </a>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="badge-hero"><i class="fas fa-compass"></i> La Ciudad de las Ventanas Abiertas</span>
+            <h1>Descubre la Magia de Florián, Santander</h1>
+            <p>Hospédate en el Hotel Guaymaral y explora las majestuosas Ventanas de Tisquizoque, cuevas místicas, pozos turquesa y aventuras de ecoturismo inolvidables.</p>
+
+            <div class="hero-buttons">
+                <a href="#atractivos" class="btn-action btn-gold">
+                    <i class="fas fa-map-marked-alt"></i> Ver Sitios Turísticos
+                </a>
+                <!-- PENDIENTE: agregar el link real del video oficial de Florián en data-video-url (ej: https://www.youtube.com/embed/XXXXXXXXXXX) -->
+                <button type="button" id="openVideoBtn" class="btn-action btn-outline" data-video-url="">
+                    <i class="fas fa-play-circle"></i> Video Oficial de Florián
+                </button>
+            </div>
+
+            <!-- BUSCADOR DE RESERVAS -->
+            <div class="booking-box">
+                <form id="bookingForm" novalidate>
+                    <div class="form-group">
+                        <label for="fechaLlegada"><i class="far fa-calendar-alt"></i> LLEGADA</label>
+                        <input type="date" id="fechaLlegada" name="fechaLlegada" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaSalida"><i class="far fa-calendar-alt"></i> SALIDA</label>
+                        <input type="date" id="fechaSalida" name="fechaSalida" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numHuespedes"><i class="fas fa-user-friends"></i> HUÉSPEDES</label>
+                        <select id="numHuespedes" name="numHuespedes">
+                            <option value="1 Persona">1 Persona</option>
+                            <option value="2 Personas" selected>2 Personas</option>
+                            <option value="3 Personas">3 Personas</option>
+                            <option value="4+ Personas">4+ Personas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-search">
+                            <i class="fas fa-search"></i> Consultar Disponibilidad
+                        </button>
+                    </div>
+                    <p class="form-feedback" role="alert"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIENVENIDA -->
+    <section class="section-padding">
+        <div class="welcome-card">
+            <!-- Imagen externa (semana.com). Si el hotel tiene su propia foto del letrero de entrada, reemplazar por un archivo local. -->
+            <img src="https://www.semana.com/resizer/v2/XHDO2UETP5GG3AUUYT77FEFC4Q.JPG?smart=true&auth=b02a054436c7601bb0e0bd38a3bfd4d65dd403a956327ec4e55e6d3d91067847&width=980&height=551" alt="Letrero de entrada al municipio de Florián, Santander" class="welcome-img" loading="lazy">
+            <div class="welcome-text">
+                <h2>Bienvenidos a Florián</h2>
+                <p>Ubicado en la majestuosa Cordillera Oriental en Santander, Florián te recibe con su icónico letrero de entrada. Prepara tu cámara para capturar la primera postal de un viaje lleno de naturaleza pura, cascadas monumentales y hospitalidad santandereana.</p>
+                <a href="#atractivos" class="btn-action btn-gold">Comenzar Recorrido <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. HABITACIONES -->
+    <section id="habitaciones" class="section-padding bg-muted">
+        <div class="section-header">
+            <span>Descansa a tu Manera</span>
+            <h2>Habitaciones para Cada Viaje</h2>
+            <p>Opciones cómodas y económicas para viajeros solos, parejas y familias completas.</p>
+        </div>
+
+        <div class="rooms-grid">
+            <!-- Habitación 1 -->
+            <div class="room-card">
+                <div class="room-photo">
+                    <!-- PENDIENTE: reemplazar por foto real de la habitación -->
+                    <i class="fas fa-image"></i> Foto próximamente
+                </div>
+                <div class="room-info">
+                    <h3>Habitación Mirador</h3>
+                    <p>Una opción tranquila para dos, con ventilación natural y vista al ambiente de montaña. Ideal para parejas.</p>
+                    <p class="room-price"><span class="pending">Tarifa por confirmar con el hotel</span></p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-bed"></i> Cama doble</span>
+                        <span class="tag-item"><i class="fas fa-bath"></i> Baño privado</span>
+                        <span class="tag-item"><i class="fas fa-door-open"></i> Con balcón</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habitación 2 -->
+            <div class="room-card">
+                <div class="room-photo">
+                    <i class="fas fa-image"></i> Foto próximamente
+                </div>
+                <div class="room-info">
+                    <h3>Habitación Familiar</h3>
+                    <p>Espacio flexible para descansar juntos después de recorrer cascadas y senderos. Hasta 5 huéspedes.</p>
+                    <p class="room-price"><span class="pending">Tarifa por confirmar con el hotel</span></p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-users"></i> Hasta 5 huéspedes</span>
+                        <span class="tag-item"><i class="fas fa-bath"></i> Baño privado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habitación 3 -->
+            <div class="room-card">
+                <div class="room-photo">
+                    <i class="fas fa-image"></i> Foto próximamente
+                </div>
+                <div class="room-info">
+                    <h3>Habitación Viajera</h3>
+                    <p>Comodidad esencial y una tarifa práctica para quienes pasan el día explorando. La opción más solicitada.</p>
+                    <p class="room-price"><span class="pending">Tarifa por confirmar con el hotel</span></p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-user-friends"></i> 1–2 huéspedes</span>
+                        <span class="tag-item"><i class="fas fa-tv"></i> TV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ATRACTIVOS TURÍSTICOS -->
+    <section id="atractivos" class="section-padding">
+        <div class="section-header">
+            <span>Ruta Ecoturística</span>
+            <h2>Atractivos Turísticos de Florián</h2>
+            <p>Explora los tesoros naturales imperdibles con galerías de fotos e información detallada.</p>
+        </div>
+
+        <div class="attractions-grid">
+
+            <!-- Card 1: Ventanas de Tisquizoque -->
+            <div class="attraction-card">
+                <div class="attraction-gallery">
+                    <span class="attraction-badge">El Ícono Imprescindible</span>
+                    <img id="img-ventanas" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjow5cdcTnpYGxBsO17okUS3SdZpkUC68dbDykrG9qw&s=10" alt="Ventana de Tisquizoque">
+                </div>
+                <div class="attraction-thumbs" data-target="img-ventanas">
+                    <button type="button" class="active" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjow5cdcTnpYGxBsO17okUS3SdZpkUC68dbDykrG9qw&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjow5cdcTnpYGxBsO17okUS3SdZpkUC68dbDykrG9qw&s=10" alt=""></button>
+                    <button type="button" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttOxN_31sVToNIn0bgyqGNn-gtCc0wyoStPXHH83mDw&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttOxN_31sVToNIn0bgyqGNn-gtCc0wyoStPXHH83mDw&s=10" alt=""></button>
+                    <button type="button" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMQ1vzTACNfaAYdx41osHxD9VwtGWCXxrv-R5yLtBCQ&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMQ1vzTACNfaAYdx41osHxD9VwtGWCXxrv-R5yLtBCQ&s=10" alt=""></button>
+                </div>
+                <div class="attraction-info">
+                    <h3>1. Ventanas de Tisquizoque y Cueva</h3>
+                    <p>Una colosal cueva natural incrustada en la montaña de donde brota una cascada escalonada de 3 niveles con más de 300 metros de caída. Ideal para torrentismo, espeleología y puentes colgantes.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-bold"></i> Torrentismo</span>
+                        <span class="tag-item"><i class="fas fa-walking"></i> Senderismo</span>
+                        <span class="tag-item"><i class="fas fa-camera"></i> Mirador</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="cacique-travel" data-wa-message="Hola, quiero coordinar un tour de aventura (torrentismo/rappel) a las Ventanas de Tisquizoque con Cacique Travel.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Charco Paila -->
+            <div class="attraction-card">
+                <div class="attraction-gallery">
+                    <span class="attraction-badge">Oasis de Bienvenida</span>
+                    <img id="img-paila" src="images/charco paila.jpg">
+                </div>
+                <div class="attraction-thumbs" data-target="img-paila">
+                    <button type="button" class="active" data-src="images/charco paila.jpg"></button>
+                    <button type="button" data-src="images/Charco paila 2.jpg"></button>
+                </div>
+                <div class="attraction-info">
+                    <h3>2. Charco Paila</h3>
+                    <p>Ubicado estratégicamente antes de la cueva principal. Posee gigantescas lajas de piedra esculpidas por el agua en forma de pailas con piscinas cristalinas para nadar y relajarse.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-swimmer"></i> Balneario</span>
+                        <span class="tag-item"><i class="fas fa-users"></i> Familiar</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero coordinar una salida a Charco Paila con Turismo ECO Florián.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Charco Azul -->
+            <div class="attraction-card">
+                <div class="attraction-gallery">
+                    <span class="attraction-badge">Piscina Turquesa</span>
+                    <img id="img-azul" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBbyo3P2HSuU9nUMrkQX5_bAcWk67AEyyCFOi3LIu9Q&s=10" alt="Charco Azul">
+                </div>
+                <div class="attraction-thumbs" data-target="img-azul">
+                    <button type="button" class="active" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBbyo3P2HSuU9nUMrkQX5_bAcWk67AEyyCFOi3LIu9Q&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBbyo3P2HSuU9nUMrkQX5_bAcWk67AEyyCFOi3LIu9Q&s=10" alt=""></button>
+                    <button type="button" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ArAoHYWCjgtt9pqc3-QkX3MFI4eTQpPaRvLk93IRxg&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ArAoHYWCjgtt9pqc3-QkX3MFI4eTQpPaRvLk93IRxg&s=10" alt=""></button>
+                </div>
+                <div class="attraction-info">
+                    <h3>3. Charco Azul</h3>
+                    <p>Un espectacular pozo de aguas turquesas ubicado en la base donde desembocan las aguas de las Ventanas. Nadarás contemplando la imponencia de la gran cascada.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-water"></i> Pozo Profundo</span>
+                        <span class="tag-item"><i class="fas fa-tree"></i> Cañón Verde</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero coordinar una salida a Charco Azul con Turismo ECO Florián.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Las Gemelas -->
+            <div class="attraction-card">
+                <div class="attraction-gallery">
+                    <span class="attraction-badge">Rincón Secreto</span>
+                    <img id="img-gemelas" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6eot6CNrzImJfHtDNlzHFFula4NnDmXF0cjUeMnOaw&s=10" alt="Las Gemelas">
+                </div>
+                <div class="attraction-thumbs" data-target="img-gemelas">
+                    <button type="button" class="active" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6eot6CNrzImJfHtDNlzHFFula4NnDmXF0cjUeMnOaw&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6eot6CNrzImJfHtDNlzHFFula4NnDmXF0cjUeMnOaw&s=10" alt=""></button>
+                </div>
+                <div class="attraction-info">
+                    <h3>4. Cascadas Las Gemelas</h3>
+                    <p>Un circuito ecoturístico exclusivo entre fincas campesinas tradicionales. Se compone de dos caídas de agua continuas paralelas con pozas totalmente vírgenes.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-leaf"></i> Eco-ruta</span>
+                        <span class="tag-item"><i class="fas fa-water"></i> Pozas naturales</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero coordinar una salida a Las Gemelas con Turismo ECO Florián.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Cerro de los Venados -->
+            <div class="attraction-card">
+                <div class="attraction-gallery">
+                    <span class="attraction-badge">Trekking 360°</span>
+                    <img id="img-cerro" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWANNlnuCK4pPvgrWjwsDvrWa1ickS9452flVgBT-3Q&s=10" alt="Cerro de los Venados">
+                </div>
+                <div class="attraction-thumbs" data-target="img-cerro">
+                    <button type="button" class="active" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWANNlnuCK4pPvgrWjwsDvrWa1ickS9452flVgBT-3Q&s=10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWANNlnuCK4pPvgrWjwsDvrWa1ickS9452flVgBT-3Q&s=10" alt=""></button>
+                </div>
+                <div class="attraction-info">
+                    <h3>5. Cerro de los Venados</h3>
+                    <p>Ascenso panorámico con vistas de 360° sobre el municipio y los cañones cercanos. Un mirador natural ideal para el atardecer.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-mountain"></i> Trekking</span>
+                        <span class="tag-item"><i class="fas fa-binoculars"></i> Mirador</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero coordinar una subida al Cerro de los Venados con Turismo ECO Florián.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6: El Chiconal (NUEVO, pendiente de fotos) -->
+            <div class="attraction-card">
+                <div class="attraction-gallery is-pending">
+                    <!-- PENDIENTE: reemplazar por fotos reales de El Chiconal -->
+                    <img id="img-chiconal" src="images/imagen chiconal.jpg" alt="El Chiconal, Florián Santander">
+                </div>
+                <div class="attraction-info">
+                    <h3>6. El Chiconal</h3>
+                    <p>Hogar de la caverna de las Caicas y de fuentes de aguas termales naturales. Una experiencia distinta dentro de la ruta ecoturística de Florián.</p>
+                    <div class="tag-list">
+                        <span class="tag-item"><i class="fas fa-water"></i> Aguas termales</span>
+                        <span class="tag-item"><i class="fas fa-mountain"></i> Caverna</span>
+                    </div>
+                    <a href="#" class="btn-tour-ally" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero coordinar una visita a El Chiconal (caverna de las Caicas y aguas termales) con Turismo ECO Florián.">
+                        <i class="fas fa-hiking"></i> Coordinar con guía
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. ALIADOS Y GUÍAS LOCALES -->
+    <section id="aliados" class="section-padding bg-muted">
+        <div class="section-header">
+            <span>Guianza Segura y Certificada</span>
+            <h2>Aliados y Guías Locales</h2>
+            <p>El Hotel Guaymaral trabaja de la mano con operadores formales del municipio para que tu aventura sea segura de principio a fin.</p>
+        </div>
+
+        <div class="safety-note">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+                <h4>Sello de Seguridad Turística</h4>
+                <p>No te adentres por tu cuenta a atractivos de aventura como la Cueva de las Caicas (El Chiconal) o el rappel en las Ventanas de Tisquizoque. Coordina siempre el acompañamiento de un guía certificado para evitar accidentes.</p>
+            </div>
+        </div>
+
+        <div class="allies-grid">
+            <!-- Aliado principal -->
+            <div class="ally-card featured">
+                <span class="ally-badge"><i class="fas fa-star"></i> Aliado Principal</span>
+                <div class="ally-card-header">
+                    <i class="fas fa-person-hiking"></i>
+                    <div>
+                        <span class="ally-role">Deportes de Aventura</span>
+                        <h3>Cacique Travel &amp; Aventure (Diego Barahona)</h3>
+                    </div>
+                </div>
+                <p>Guías locales especializados en deportes extremos en las Ventanas de Tisquizoque: torrentismo, rappel y canyoning, de la mano de baquianos expertos de la zona.</p>
+                <ul class="ally-meta">
+                    <li><i class="fas fa-water"></i> Torrentismo · Rappel · Canyoning</li>
+                    <li><i class="fas fa-phone"></i> +57 315 758 7181</li>
+                </ul>
+                <a href="#" class="btn-contact-guide" data-wa-ally="cacique-travel" data-wa-message="Hola Diego, quiero información sobre los tours de aventura de Cacique Travel & Aventure en las Ventanas de Tisquizoque.">
+                    <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                </a>
+            </div>
+
+            <!-- Aliado secundario -->
+            <div class="ally-card">
+                <div class="ally-card-header">
+                    <i class="fas fa-route"></i>
+                    <div>
+                        <span class="ally-role">Senderismo y Naturaleza</span>
+                        <h3>Turismo ECO Florián</h3>
+                    </div>
+                </div>
+                <p>Agencia operadora formal con mayor trayectoria en el municipio. Ideal para coordinar senderismo, rutas hacia los charcos y planes de naturaleza integrados.</p>
+                <ul class="ally-meta">
+                    <li><i class="fas fa-walking"></i> Senderismo · Rutas a charcos</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 3 # 1B - 156, Florián</li>
+                    <li><i class="fas fa-phone"></i> +57 310 625 2439</li>
+                </ul>
+                <a href="#" class="btn-contact-guide" data-wa-ally="turismo-eco-florian" data-wa-message="Hola, quiero información sobre los planes de senderismo de Turismo ECO Florián.">
+                    <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CLIMA -->
+    <section id="clima" class="section-padding">
+        <div class="climate-box">
+            <span style="color:#d4af37; font-weight:700; font-size:0.85rem; text-transform:uppercase; letter-spacing:1px;">Prepara tu Maleta</span>
+            <h2>Clima en Florián</h2>
+            <p style="color:#e2e8f0;">Florián tiene clima de montaña con lluvias frecuentes. Estos son promedios generales de la región — confirma el pronóstico del día antes de viajar.</p>
+            <div class="climate-grid">
+                <div class="climate-card">
+                    <i class="fas fa-temperature-half"></i>
+                    <h4>Temperatura promedio</h4>
+                    <p>Entre 16°C y 22°C durante el día.</p>
+                </div>
+                <div class="climate-card">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h4>Temporada de lluvias</h4>
+                    <p>Más frecuentes entre abril–mayo y octubre–noviembre.</p>
+                </div>
+                <div class="climate-card">
+                    <i class="fas fa-sun"></i>
+                    <h4>Mejor horario</h4>
+                    <p>Las mañanas suelen ser más despejadas para las excursiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CÓMO LLEGAR -->
+    <section id="llegar" class="section-padding bg-muted">
+        <div class="section-header">
+            <span>Planea tu Viaje</span>
+            <h2>Cómo Llegar al Hotel Guaymaral</h2>
+            <p>Rutas de acceso desde las principales ciudades cercanas.</p>
+        </div>
+        <div class="routes-container">
+            <div class="routes-grid">
+                <div class="route-card">
+                    <h4><i class="fas fa-car"></i> Desde Bogotá</h4>
+                    <p>Vía Chiquinquirá – Barbosa – Florián. Aproximadamente 5–6 horas en carro.</p>
+                </div>
+                <div class="route-card">
+                    <h4><i class="fas fa-car"></i> Desde Bucaramanga</h4>
+                    <p>Vía Barbosa – Florián. Aproximadamente 4–5 horas en carro.</p>
+                </div>
+                <div class="route-card">
+                    <h4><i class="fas fa-car"></i> Desde Barbosa</h4>
+                    <p>La ruta más corta hacia Florián, alrededor de 1–1.5 horas por vía terciaria.</p>
+                </div>
+            </div>
+            <div class="map-box">
+                <h3>Ubicación</h3>
+                <p>Barrio Loma de Vélez, Calle 3 # 1B – 153, Florián, Santander, Colombia.</p>
+                <iframe class="map-embed" src="https://www.google.com/maps?q=Hotel+Guaymaral,+Florián,+Santander,+Colombia&output=embed" loading="lazy" title="Ubicación del Hotel Guaymaral en Google Maps"></iframe>
+                <a href="https://maps.google.com/?q=Hotel+Guaymaral+Florián+Santander" target="_blank" rel="noopener" class="btn-map">
+                    <i class="fas fa-location-arrow"></i> Abrir en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. EL HOTEL -->
+    <section id="hotel" class="section-padding">
+        <div class="section-header">
+            <span>Tu Base de Operaciones</span>
+            <h2>Instalaciones y Servicios del Hotel Guaymaral</h2>
+            <p>Atención familiar, tranquilidad y economía a pocos pasos del parque principal.</p>
+        </div>
+        <div class="hotel-services">
+            <div class="service-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Wi-Fi Gratuito</h3>
+                <p>Conexión a internet estable en zonas comunes y habitaciones.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-parking"></i>
+                <h3>Parqueadero</h3>
+                <p>Espacio para vehículos y motos de los huéspedes.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Restaurante Local</h3>
+                <p>Comida típica santandereana preparada en casa.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>Terraza y Jardín</h3>
+                <p>Zonas de descanso al aire libre para relajarte tras la aventura.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="#" class="whatsapp-float" data-wa-message="Hola, deseo información de reservas del Hotel Guaymaral." aria-label="Escribir por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL DE VIDEO -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button type="button" class="close-modal" id="closeVideoBtn" aria-label="Cerrar video">&times;</button>
+            <iframe id="videoIframe" src="" title="Video oficial de Florián, Santander" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Hotel Guaymaral</h3>
+        <p>Florián, Santander — La Ciudad de las Ventanas Abiertas.</p>
+        <div class="social-icons">
+            <a href="#" data-wa-plain aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Hotel Guaymaral. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

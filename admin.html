@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración | Hotel Guaymaral</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+    <!-- ================================================================
+         AVISO IMPORTANTE (léelo antes de usar en producción):
+         Esta pantalla es SOLO la interfaz visual. El formulario de login
+         no valida contra ninguna base de datos real todavía — cualquier
+         usuario/contraseña "funciona" y solo simula el acceso en el
+         navegador. Para que esto sea seguro de verdad, hace falta un
+         backend (servidor + base de datos) que verifique las credenciales.
+         No publiques este panel esperando que esté protegido tal como está.
+         ================================================================ -->
+
+    <!-- PANTALLA DE LOGIN -->
+    <div class="admin-login-screen" id="loginScreen">
+        <div class="admin-login-card">
+            <img src="images/logo-hotel-guaymaral.jpg" alt="Hotel Guaymaral" class="admin-logo">
+            <h1>Panel de Administración</h1>
+            <p class="admin-subtitle">Hotel Guaymaral · Florián, Santander</p>
+
+            <div class="admin-demo-badge">
+                <i class="fas fa-triangle-exclamation"></i> Vista de demostración — sin conexión a base de datos aún
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminUser">Usuario</label>
+                    <input type="text" id="adminUser" placeholder="admin@hotelguaymaral.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPass">Contraseña</label>
+                    <input type="password" id="adminPass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-search" style="width:100%;">
+                    <i class="fas fa-right-to-bracket"></i> Ingresar
+                </button>
+            </form>
+            <a href="index.html" class="admin-back-link"><i class="fas fa-arrow-left"></i> Volver al sitio</a>
+        </div>
+    </div>
+
+    <!-- PANEL PRINCIPAL (oculto hasta "iniciar sesión") -->
+    <div class="admin-dashboard" id="dashboardScreen" hidden>
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-logo">
+                <img src="images/logo-hotel-guaymaral.jpg" alt="Hotel Guaymaral">
+                <span>Guaymaral<br><small>Panel Admin</small></span>
+            </div>
+            <nav class="admin-nav">
+                <a href="#" class="active" data-panel="panel-resumen"><i class="fas fa-gauge"></i> Resumen</a>
+                <a href="#" data-panel="panel-habitaciones"><i class="fas fa-bed"></i> Habitaciones y Tarifas</a>
+                <a href="#" data-panel="panel-fotos"><i class="fas fa-images"></i> Fotos del Hotel</a>
+                <a href="#" data-panel="panel-atractivos"><i class="fas fa-mountain"></i> Atractivos Turísticos</a>
+                <a href="#" data-panel="panel-aliados"><i class="fas fa-people-group"></i> Guías y Aliados</a>
+                <a href="#" data-panel="panel-mensajes"><i class="fas fa-comment"></i> Mensajes de Contacto</a>
+            </nav>
+            <button type="button" id="logoutBtn" class="admin-logout"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</button>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <button type="button" id="sidebarToggle" class="admin-sidebar-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+                <div class="admin-demo-badge admin-demo-badge--top">
+                    <i class="fas fa-triangle-exclamation"></i> Demo visual — falta conectar backend
+                </div>
+            </header>
+
+            <!-- RESUMEN -->
+            <section class="admin-panel" id="panel-resumen">
+                <h2>Resumen</h2>
+                <p class="admin-panel-desc">Vista general de la información pública del sitio.</p>
+                <div class="admin-cards-grid">
+                    <div class="admin-stat-card">
+                        <i class="fas fa-bed"></i>
+                        <div><span>3</span><small>Habitaciones publicadas</small></div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <i class="fas fa-mountain"></i>
+                        <div><span>6</span><small>Atractivos turísticos</small></div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <i class="fas fa-people-group"></i>
+                        <div><span>2</span><small>Guías / aliados aliados</small></div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <div><span>—</span><small>Mensajes recibidos (requiere backend)</small></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABITACIONES -->
+            <section class="admin-panel" id="panel-habitaciones" hidden>
+                <h2>Habitaciones y Tarifas</h2>
+                <p class="admin-panel-desc">Aquí la administradora podrá editar precios, fotos y disponibilidad de cada habitación una vez esté conectado el backend.</p>
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Habitación</th><th>Capacidad</th><th>Tarifa / noche</th><th>Estado</th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Habitación Mirador</td>
+                            <td>2 personas</td>
+                            <td><em>Pendiente</em></td>
+                            <td><span class="admin-badge admin-badge--warn">Sin tarifa</span></td>
+                            <td><button type="button" class="admin-btn-edit" disabled>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Familiar</td>
+                            <td>Hasta 5 personas</td>
+                            <td><em>Pendiente</em></td>
+                            <td><span class="admin-badge admin-badge--warn">Sin tarifa</span></td>
+                            <td><button type="button" class="admin-btn-edit" disabled>Editar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Viajera</td>
+                            <td>1–2 personas</td>
+                            <td><em>Pendiente</em></td>
+                            <td><span class="admin-badge admin-badge--warn">Sin tarifa</span></td>
+                            <td><button type="button" class="admin-btn-edit" disabled>Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="admin-note"><i class="fas fa-circle-info"></i> Los botones "Editar" están deshabilitados: esta tabla es solo de muestra hasta conectar una base de datos real.</p>
+            </section>
+
+            <!-- FOTOS -->
+            <section class="admin-panel" id="panel-fotos" hidden>
+                <h2>Fotos del Hotel</h2>
+                <p class="admin-panel-desc">Zona de muestra para subir y organizar fotos. La subida real de archivos requiere almacenamiento en servidor (ej. Firebase Storage, S3, o un backend propio).</p>
+                <div class="admin-upload-box">
+                    <i class="fas fa-cloud-arrow-up"></i>
+                    <p>Arrastra fotos aquí o haz clic para seleccionar</p>
+                    <span>(Función visual — aún no guarda archivos)</span>
+                </div>
+            </section>
+
+            <!-- ATRACTIVOS -->
+            <section class="admin-panel" id="panel-atractivos" hidden>
+                <h2>Atractivos Turísticos</h2>
+                <p class="admin-panel-desc">Lista de los atractivos publicados actualmente en el sitio.</p>
+                <ul class="admin-simple-list">
+                    <li>Ventanas de Tisquizoque y Cueva</li>
+                    <li>Charco Paila</li>
+                    <li>Charco Azul</li>
+                    <li>Cascadas Las Gemelas</li>
+                    <li>Cerro de los Venados</li>
+                    <li>El Chiconal</li>
+                </ul>
+            </section>
+
+            <!-- ALIADOS -->
+            <section class="admin-panel" id="panel-aliados" hidden>
+                <h2>Guías y Aliados</h2>
+                <p class="admin-panel-desc">Contactos de los operadores turísticos publicados en el sitio.</p>
+                <ul class="admin-simple-list">
+                    <li>Cacique Travel &amp; Aventure (Diego Barahona) — +57 315 758 7181</li>
+                    <li>Turismo ECO Florián — +57 310 625 2439</li>
+                </ul>
+            </section>
+
+            <!-- MENSAJES -->
+            <section class="admin-panel" id="panel-mensajes" hidden>
+                <h2>Mensajes de Contacto</h2>
+                <p class="admin-panel-desc">Hoy las reservas llegan directo al WhatsApp del hotel, no quedan guardadas aquí. Si más adelante quieres un historial dentro del panel, hace falta conectar un backend que reciba y guarde esos mensajes.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
